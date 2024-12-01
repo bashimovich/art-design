@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 html {
     font-size: 10px;
-  scrollbar-width: thin;
-  scrollbar-color: #141414 #f0f0f0;
+    scrollbar-width: thin;
+    scrollbar-color: #141414 #f0f0f0;
+    scroll-behavior: smooth;
+
 }
 
 
@@ -394,6 +396,7 @@ h6 {
     width: 100%;
     height: 100vh;
     background-color: #141414;
+    margin: 2rem 0;
 }
 .section__ei_img_container{
     height: 100vh;
@@ -401,33 +404,59 @@ h6 {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .section__ei__square__img{
     background-image: url('./images/II.jpeg');
     background-position: center;
     background-size: cover;
-    width: 860px;
-    height: 860px;
-
-}
-
-.section__ei__circle__img_container{
-    /* width: 860px; */
     width: 50%;
-    height: 860px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    overflow: hidden;
 
+}
+.section__ei__square__img div{
+    width: 40rem;
+    height: 60rem;
+    background-color: transparent;
+    border-radius: 50%;
+    outline: solid 50rem #141414;
+    outline-offset: 5rem;
+    transition: all ease .5s;
+
+}
+.section__ei__square__img:hover.section__ei__square__img div{
+    outline-offset: 45rem;
+    cursor: pointer;
+}
 .section__ei__circle__img{
     background-image: url('./images/III.jpeg');
     background-position: center;
     background-size: cover;
-    width: 760px;
-    height: 860px;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.section__ei__circle__img div{
+    width: 40rem;
+    height: 60rem;
+    background-color: transparent;
     border-radius: 50%;
+    outline: solid 50rem #141414;
+    outline-offset: 5rem;
+    transition: all ease .5s;
+
+}
+.section__ei__circle__img:hover.section__ei__circle__img div{
+    outline-offset: 45rem;
+    cursor: pointer;
 }
 
 /* section nine style start */
