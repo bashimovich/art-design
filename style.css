@@ -4,10 +4,7 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #141414 #f0f0f0;
     scroll-behavior: smooth;
-
 }
-
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -31,14 +28,11 @@ html {
 }
 
 
-
-
-
 body {
     margin: 0;
     padding: 0;
     font-family: "Sofia Sans", sans-serif;
-    background-color: #141414;
+    background-color: #141414 !important;
 }
 
 img {
@@ -65,68 +59,57 @@ h6 {
 .ml-3 {
     margin-left: 3rem;
 }
-
+section{
+    position: relative;
+    background-color: #141414;
+}
 
 /* section one style start */
-
-.h-scroll {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    overflow-x: hidden;
-}
-
 .section__one {
     min-width: 100%;
-}
-
-.section__one .section__title {
-    text-align: center;
+    height: 100vh;
     background: url('./images/section_one_back.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
+}
+
+.section__title {
+    text-align: center;
     color: #fff;
     height: 100vh;
     min-width: 100%;
+    position: sticky;
+    top: 0;
 }
-
-.section__one .section__title h1 {
+.section__one__ii_bg_img {
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+}
+.section__title h1 {
     font-size: 26.8rem;
     font-weight: 208px;
     text-transform: uppercase;
+    transition: all ease .4s;
 }
-
-
-/* section one style end */
-
-
-/* section three style start */
-
 .section__one__ii_bg_img p {
     font-size: 4.4rem;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
     width: 70%;
-    background-color: hsla(0, 0%, 0%, 0.2);
-    padding: 1rem;
-}
-
-.section__one__ii_bg_img {
-    height: 100vh;
-    min-width: 100%;
-    background: url('./images/section_one_back.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: all ease .4s;
 }
 
 
-/* section three style end */
+/* section one style end */
 
 
 /* section two style start */
@@ -137,6 +120,9 @@ h6 {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #141414 !important;
 }
 
 .section__two__wrapper {
@@ -154,12 +140,20 @@ h6 {
 }
 
 .section__two .section__two__container .square__img {
-    width: 65.4rem;
-    height: 80rem;
+    width: 0;
+    height: 0;
+    opacity: 0;
     background: url('./images/section_two.jpeg');
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: all ease .5s;
+}
+.section__two .section__two__container .square__img.active {
+    width: 65.4rem;
+    height: 80rem;
+    opacity: 1;
+
 }
 
 .section__two .section__two__container .circle__img {
@@ -254,6 +248,17 @@ h6 {
     color: #fff;
     text-transform: uppercase;
 }
+
+.forani{
+    transform: translateY(40rem);    
+    transition: all ease .8s;
+    opacity: 0;
+}
+.forani.active{
+    transform: translateY(0);    
+    opacity: 1;
+}
+
 /* section four style end */
 /* section five style start */
 .section__five{
@@ -375,7 +380,7 @@ h6 {
     background-color: #141414;
     width: 100%;
     overflow: hidden;
-    /* height: 100vh; */
+    height: 100vh;
 
 }
 .section__six__title{
@@ -388,22 +393,29 @@ h6 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 60%;
+    justify-content: flex-end;
+    width: 100%;
     height: 100vh;
     margin: 0 auto;
     transition: all ease 1s;
 
 }
 .section__six__img_bg{
-    height: 100vh;
-    width: 100%;
+    height: 80vh;
+    width: 50%;
     background: url('./images/interyer.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50% 50% 0% 0%;
-    border: 20rem solid #fff;
+    outline: 20rem solid #fff;
     border-bottom: none;
+    transition: all ease 1s;
+}
+.section__six__img_bg.active{
+    width: 100%;
+    height: 100vh;
+    outline: 50rem solid #fff;
 }
 
 
@@ -672,6 +684,7 @@ h6 {
     background-size: cover;
     width: 80%;
     min-height: 95vh;
+    transition: all ease .4s;
 }
 
 

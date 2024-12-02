@@ -7,23 +7,22 @@
     <title>design</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="script.js" type="module" defer></script>
 </head>
 
 <body>
-    <div class="h-scroll">
-        <section class="section__one">
-            <div class="section__title">
-                <h1 class="ml2">Название</h1>
-                <h1 class="ml2">проекта</h1>
-            </div>
-        </section>
-        <section class="section__one">
-            <div class="section__one__ii_bg_img">
-                <p>Планы всегда переходят в действия, а действия - в осязаемый результат. Мы создаем проекты, которыми можно гордиться.</p>
-            </div>
-        </section>
-
+    <section class="section__one"></section>
+    <div class="section__title">
+        <h1 class="ml2">Название</h1>
+        <h1 class="ml2">проекта</h1>
     </div>
+    <div class="section__one__ii_bg_img">
+        <p>Планы всегда переходят в действия, а действия - в осязаемый результат. Мы создаем проекты, которыми можно гордиться.</p>
+    </div>
+
     <div class="w-scroll">
         <section class="section__two " id="section__two">
             <div class="section__two__wrapper">
@@ -36,17 +35,16 @@
                 </div>
             </div>
         </section>
-    </div>
-    <section class="section__three" id="section__three">
-        <div class="circle__img" id="circle__img"></div>
-    </section>
-        <!-- <section class="section__four" id="section__four">
+        <section class="section__three section__w" id="section__three">
+            <div class="circle__img" id="circle__img"></div>
+        </section>
+        <section class="section__four section__w" id="section__four">
             <div class="section__four__text">
-                <h1>О проекте</h1>
-                <p>Фасады индивидуальны для каждой из башен, но выполнены в общей концепции. Фасады индивидуальны для каждой из Фасады индивидуальны для каждой из башенФасады индивидуальны для каждой из башен, но выполнены в общей концепции. Фасады индивидуальны для каждой из Фасады индивидуальны для каждой из башен</p>
+                <h1 class="forani">О проекте</h1>
+                <p class="forani">Фасады индивидуальны для каждой из башен, но выполнены в общей концепции. Фасады индивидуальны для каждой из Фасады индивидуальны для каждой из башенФасады индивидуальны для каждой из башен, но выполнены в общей концепции. Фасады индивидуальны для каждой из Фасады индивидуальны для каждой из башен</p>
             </div>
         </section>
-        <section class="section__five" id="section__five">
+        <section class="section__five section__w" id="section__five">
             <div class="slider__section">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div class="container">
@@ -71,7 +69,7 @@
                 </div>
             </div>
         </section>
-        <section class="section__six" id="section__six">
+        <section class="section__six section__w" id="section__six">
             <h1 class="section__six__title">
                 Интерьер
             </h1>
@@ -79,7 +77,8 @@
                 <div class="section__six__img_bg"></div>
             </div>
         </section>
-        <section class="section__ei" id="section__ei">
+        <section class="section__seven section__w"></section>
+        <section class="section__ei section__w" id="section__ei">
             <div class="section__ei_img_container">
                 <div class="section__ei__square__img">
                     <div></div>
@@ -89,7 +88,7 @@
                 </div>
             </div>
         </section>
-        <section class="section__nine" id="section__nine">
+        <section class="section__nine section__w" id="section__nine">
             <div class="slider__section">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                 <div class="container">
@@ -114,13 +113,13 @@
                 </div>
             </div>
         </section>
-        <section class="section__ten" id="section__ten">
+        <section class="section__ten section__w" id="section__ten">
             <div class="section__ten_container">
                 <h1>Ландшафт</h1>
                 <div class="section__ten_img"></div>
             </div>
         </section>
-        <section class="section__ele" id="saction__ele">
+        <section class="section__ele section__w" id="saction__ele">
             <div class="section__ele_container">
                 <div class="text__circle__img">
                     <div></div>
@@ -129,18 +128,18 @@
                 <div class="square__img"></div>
             </div>
         </section>
-        <section class="section__twe" id="section__twe">
+        <section class="section__twe section__w" id="section__twe">
             <div class="section__twe__container">
                 <img class="twe_img_1" src="./images/interyer.jpeg" alt="">
                 <img class="twe_img_2" src="./images/III.jpeg" alt="">
             </div>
         </section>
-        <section class="section__th" id="section__th">
+        <section class="section__th section__w" id="section__th">
             <div class="section__th__container">
                 <img class="twe_img_2" src="./images/III.jpeg" alt="">
             </div>
         </section>
-        <section class="section__fo" id="section__fo">
+        <section class="section__fo section__w" id="section__fo">
             <div class="section__fo__container">
                 <div class="box__container">
                     <div class="box1">
@@ -158,13 +157,14 @@
                 </div>
             </div>
         </section>
-        <section class="section__fi" id="section__fi">
+        <section class="section__fi section__w" id="section__fi">
             <div class="section__fi__container">
                 <img src="./images/section_one_back.jpeg" class="section__fi__img">
                 <img src="./images/section_one_back.jpeg" class="section__fi__img">
                 <img src="./images/section_one_back.jpeg" class="section__fi__img">
             </div>
         </section>
+    </div>
     <footer>
         <h1 class="footer__title footer__container">Расскажите о доме своей мечты, и мы составим для вас эксклюзивное коммерческое предложение.</h1>
         <div class="footer__inputs_container footer__container">
@@ -221,13 +221,7 @@
             <p>Политика конфиденциальности</p>
             <p> © Art Building Studio 2023</p>
         </div>
-    </footer> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="script.js" type="module" defer></script>
-
+    </footer>  
 </body>
 
 </html>
