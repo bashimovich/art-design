@@ -625,12 +625,19 @@ section{
     text-transform: uppercase;
 }
 .section__ten_container .section__ten_img{
-    border-radius: 50% 0;
-    width: 70%;
-    height: 84vh;
+    /* border-radius: 50% 0; */
+    width: 0;
+    height: 0;
     background: url('./images/section_two.jpeg');
     background-position: center;
     background-size: cover;
+    transition: all ease-in-out .4s;
+    opacity: 0;
+}
+.section__ten_container .section__ten_img.active{
+    width: 70%;
+    height: 84vh;
+    opacity: 1;
 }
 /* section ten style end */
 
@@ -651,11 +658,17 @@ section{
     justify-content: center;
 }
 .section__ele_container .text__circle__img{
-    width: 50%;
+    width: 0;
     min-height: 100%;
     position: relative;
+    transition: all ease-in-out .4s;
+    opacity: 0;
 
 
+}
+.section__ele_container .text__circle__img.active{
+    width: 50%;
+    opacity: 1;
 }
 .section__ele_container .text__circle__img div{
     width: 50rem;
@@ -699,8 +712,6 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    
 }
 
 .section__twe__container{
@@ -714,17 +725,21 @@ section{
 }
 .section__twe__container img{
     width: 80rem;
-    height: 45rem;
+    height: 0;
     position: absolute;
     box-shadow: .1rem .1rem 1rem #141414;
+    transition: height ease-in-out .4s;
+}
+.twe_img_1.active, .twe_img_2.active{
+    height: 45rem;
 }
 
 .twe_img_1{
-    top: -10rem;
+    top: -8.4rem;
     left: 0;
 }
 .twe_img_2{
-    bottom: -10rem;
+    bottom: -8.4rem;
     right: 0;
 
 }
@@ -827,7 +842,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8rem 0;
+    padding-top: 8rem;
     position: relative;
 }
 .footer__container{
@@ -850,7 +865,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8rem 0;
+    padding: 2rem 0;
 }
 .footer__inputs_container input{
     width: 30%;
@@ -904,13 +919,14 @@ footer{
     position: absolute;
     bottom: 0;
     display: flex;
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
-    justify-content: space-between;
-
+    justify-content: center;
+    
 }
 .footer__bottom p{
     color: #4A4A4A;
     font-size: 2.4rem;
+    margin: 0 3rem;
 }
 /* footer style end */
