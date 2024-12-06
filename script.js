@@ -99,6 +99,20 @@ gsap.to(".twe_img_1", {
     },
 });
 
+gsap.to(".circle__opening__animation", {
+    scrollTrigger: {
+        trigger: ".section__th__container",
+        start: "center bottom",
+        end: "bottom center",
+        toggleActions: "restart pause resume pause",
+        scrub: true, 
+        toggleClass: {
+            targets: ".circle__opening__animation",
+            className: "active",
+        },
+    },
+});
+
 gsap.to(".twe_img_2", {
     scrollTrigger: {
         trigger: ".section__twe",
@@ -268,4 +282,20 @@ cylinder_gallery.addEventListener('mousemove', (e) => {
     
     cylinder_images.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
     cylinder_images.style.transition = `transform 2s`;
+});
+
+
+
+// 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".bg__image__container", {
+    x: () => -(document.querySelector(".bg__image__container").scrollWidth - window.innerWidth), // Sol kaydırma
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".scroll__slider", // Hedeflenen bölüm
+        start: "top top", // Başlangıç noktası
+        end: "bottom top", // Bitme noktası
+        scrub: true, // Kullanıcının scroll hızına göre animasyon
+    }
 });
